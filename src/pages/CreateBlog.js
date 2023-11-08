@@ -22,7 +22,7 @@ const CreateBlog = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("/api/v1/blog/create-blog", {
+      const { data } = await axios.post(`${process.env.URL_BACKEND}/api/v1/blog/create-blog`, {
         title: inputs.title,
         description: inputs.description,
         image: inputs.image,
